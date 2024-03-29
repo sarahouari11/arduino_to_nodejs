@@ -37,7 +37,7 @@ app.post("/articles", async (req, res) => {
         const newArticle = new Article();
         
         newArticle.altitude = "haha";
-        newArticle.location = "maghnia";
+        newArticle.location = "hollo";
         await newArticle.save()
         res.send("Article sent");
     } catch (error) {
@@ -49,10 +49,18 @@ app.post("/articles", async (req, res) => {
 // Endpoint to receive data from Arduino and store in MongoDB
 app.post('/data', async (req, res) => {
     try {
-        const { sensorData1, sensorData2 } = req.body;
+        const { sensorData1, sensorData2, sensorData3, sensorData4, sensorData5, sensorData6, sensorData7, sensorData8, sensorData9, sensorData10 } = req.body;
         console.log('Received data from Arduino:');
     console.log('Sensor Data 1:', sensorData1);
     console.log('Sensor Data 2:', sensorData2);
+    console.log('Sensor Data 2:', sensorData3);
+    console.log('Sensor Data 2:', sensorData4);
+    console.log('Sensor Data 2:', sensorData5); 
+    console.log('Sensor Data 2:', sensorData6);
+    console.log('Sensor Data 2:', sensorData7);
+    console.log('Sensor Data 2:', sensorData8);
+    console.log('Sensor Data 2:', sensorData9);
+    console.log('Sensor Data 2:', sensorData10);
     res.send('Data received');
         
         // Create a new document using the sensor data
