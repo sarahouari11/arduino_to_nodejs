@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://sara:sara123@firstdatabases.hiellyx.mongodb.net/
         console.error("Error connecting to MongoDB:", error);
     });
 
-app.get("/hello", (req, res) => {
+app.get("/", (req, res) => {
     res.send("hello");
     const ip = 
         request.headers['cf-connecting-ip'] ||  
