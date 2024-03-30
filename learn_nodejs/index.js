@@ -53,14 +53,14 @@ app.post('/data', async (req, res) => {
         console.log('Received data from Arduino:');
     console.log('Sensor Data 1:', sensorData1);
     console.log('Sensor Data 2:', sensorData2);
-    console.log('Sensor Data 2:', sensorData3);
-    console.log('Sensor Data 2:', sensorData4);
-    console.log('Sensor Data 2:', sensorData5); 
-    console.log('Sensor Data 2:', sensorData6);
-    console.log('Sensor Data 2:', sensorData7);
-    console.log('Sensor Data 2:', sensorData8);
-    console.log('Sensor Data 2:', sensorData9);
-    console.log('Sensor Data 2:', sensorData10);
+    console.log('Sensor Data 3:', sensorData3);
+    console.log('Sensor Data 4:', sensorData4);
+    console.log('Sensor Data 5:', sensorData5); 
+    console.log('Sensor Data 6:', sensorData6);
+    console.log('Sensor Data 7:', sensorData7);
+    console.log('Sensor Data 8:', sensorData8);
+    console.log('Sensor Data 9:', sensorData9);
+    console.log('Sensor Data 10:', sensorData10);
     res.send('Sensor Data 2:', sensorData10);
     res.send('Data receivedd');
         
@@ -69,16 +69,7 @@ app.post('/data', async (req, res) => {
             
             
             location: "maghnia" ,// Assuming this is a constant value for location
-            sensorData1,
-            sensorData2,
-            sensorData3,
-            sensorData4,
-            sensorData5,
-            sensorData6,
-            sensorData7,
-            sensorData8,
-            sensorData9,
-            sensorData10
+            
         });
         
         // Save the sensor data to MongoDB
@@ -88,7 +79,7 @@ app.post('/data', async (req, res) => {
         res.status(200).send('Data received and stored in MongoDB');
     } catch (error) {
         console.error('Error inserting data:', error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('Internal Server Error'); 
     }
 });
 
