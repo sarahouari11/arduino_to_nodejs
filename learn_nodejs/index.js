@@ -61,13 +61,24 @@ app.post('/data', async (req, res) => {
     console.log('Sensor Data 2:', sensorData8);
     console.log('Sensor Data 2:', sensorData9);
     console.log('Sensor Data 2:', sensorData10);
-    res.send('Data received');
+    res.send('Sensor Data 2:', sensorData10);
+    res.send('Data receivedd');
         
         // Create a new document using the sensor data
         const newSensorData = new Article1({ 
             
             
-            location: "maghnia" // Assuming this is a constant value for location
+            location: "maghnia" ,// Assuming this is a constant value for location
+            sensorData1,
+            sensorData2,
+            sensorData3,
+            sensorData4,
+            sensorData5,
+            sensorData6,
+            sensorData7,
+            sensorData8,
+            sensorData9,
+            sensorData10
         });
         
         // Save the sensor data to MongoDB

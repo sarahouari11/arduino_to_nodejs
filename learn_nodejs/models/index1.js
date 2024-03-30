@@ -33,4 +33,4 @@ const collection = mongoose.model("Article");
         .catch(err => {
             console.error('Error inserting data:', err);
             res.status(500).send('Internal Server Error');
-        });
+        })
